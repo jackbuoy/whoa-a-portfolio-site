@@ -1,246 +1,112 @@
-/* Reset styles for the entire page */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Set the background color to a dark color scheme */
+body {
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+/* Set the tab background color to a dark gray */
+.tabs {
+  background-color: #303030;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Style each individual tab */
+.tab {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  background-color: #303030;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tab:hover {
+  background-color: #444;
+}
+
+.tab.active {
+  background-color: #444;
+}
+
+/* Style the discussion containers */
+.discussion-container {
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 0 5px 5px 5px;
+}
+
+/* Add a pastel border to the discussion content */
+.discussion-content {
+  border: 1px solid #c8d6e5;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.discussion-content h2 {
+  margin-top: 0;
+}
+
+/* Add some animation to the comment form and comment button */
+#comment-form, .comment-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+#comment-form {
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+}
+
+#comment-form input, #comment-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #303030;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#comment-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#comment-form input[type="submit"] {
+  background-color: #fca311;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#comment-form input[type="submit"]:hover {
+  background-color: #fdcb6e;
+}
+
+/* Add some padding to the comment container */
+#comments {
+  padding-top: 20px;
+}
+
+/* Add some animation to the comment */
+.comment {
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
-  
-  /* Body styles */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #1d1d1d;
-    color: #f2f2f2;
-    padding: 20px;
-    transition: background-color 0.5s ease;
+  to {
+    opacity: 1;
   }
-  
-  /* Header styles */
-  header {
-    margin-bottom: 30px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: #f2f2f2;
-    text-decoration: none;
-    transition: color 0.5s ease;
-  }
-  
-  nav a:hover {
-    color: #ffc0cb;
-  }
-  
-  /* Main styles */
-  main {
-    border-radius: 10px;
-    background-color: #2d2d2d;
-    padding: 20px;
-    transition: background-color 0.5s ease;
-  }
-  
-  h1, h2, h3 {
-    font-weight: normal;
-  }
-  
-  .discussion {
-    margin-top: 30px;
-  }
-  
-  .discussion h3 {
-    margin-bottom: 10px;
-  }
-  
-  .discussion p {
-    margin-bottom: 20px;
-  }
-  
-  /* Footer styles */
-  footer {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 0.8em;
-    color: #a9a9a9;
-  }
-  
-  /* Dark mode styles */
-  body.dark-mode {
-    background-color: #121212;
-    color: #f2f2f2;
-  }
-  
-  .dark-mode nav a {
-    color: #f2f2f2;
-  }
-  
-  .dark-mode nav a:hover {
-    color: #ffc0cb;
-  }
-  
-  .dark-mode main {
-    background-color: #1d1d1d;
-  }
-  
-  .dark-mode footer {
-    color: #a9a9a9;
-  }
-  
-  /* Custom styles */
-  .tab-container {
-    display: flex;
-    margin-top: 20px;
-  }
-  
-  .tab {
-    background-color: #3d3d3d;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-  }
-  
-  .tab.active {
-    background-color: #ffc0cb;
-    color: #1d1d1d;
-  }
-  
-  .tab:hover {
-    background-color: #2d2d2d;
-  }
-  
-  .discussion-container {
-    margin-top: 20px;
-    display: none;
-  }
-  
-  .discussion-container.active {
-    display: block;
-  }
-  
-  .discussion-transition {
-    transition: height 0.5s ease;
-  }
-  
-  .discussion-content {
-    background-color: #3d3d3d;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  
-  .discussion-content p {
-    margin-bottom: 10px;
-  }
-  
-  .discussion-content input[type="text"], .discussion-content textarea {
-    background-color: #2d2d2d;
-    border: none;
-    color: #f2f2f2;
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .discussion-content button {
-    background-color: #ffc0cb;
-    border: none;
-    color: #1d1d1d;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .discussion-content button:hover {
-    background-color: #ff69b4;
-    color: #f2f2f2;
-  }
-  
-  /* JavaScript styles */
-  .error {
-    color: red;
-    margin-bottom: 10px;
-  }
-  
-  .success {
-    color: green;
-    margin-bottom: 10px;
-  }
-  
-  .comment {
-    margin-top: 20px;
-  }
-  
-  .comment h4 {
-    margin-bottom: 10px;
-  }
-  
-  .comment p {
-    margin-bottom: 5px;
-  }
-  
-  .comment-date {
-    font-size: 0.8em;
-    color: #a9a9a9;
-    margin-bottom: 10px;
-  }
-  
-  .reply-link {
-    font-size: 0.8em;
-    color: #ffc0cb;
-    text-decoration: none;
-    margin-bottom: 20px;
-    display: inline-block;
-  }
-  
-  .reply-link:hover {
-    text-decoration: underline;
-  }
-  
-  .reply-form {
-    margin-top: 20px;
-  }
-  
-  .reply-form input[type="text"], .reply-form textarea {
-    background-color: #2d2d2d;
-    border: none;
-    color: #f2f2f2;
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .reply-form button {
-    background-color: #ffc0cb;
-    border: none;
-    color: #1d1d1d;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .reply-form button:hover {
-    background-color: #ff69b4;
-    color: #f2f2f2;
-  }
-  
-  /* Responsive styles */
-  @media screen and (max-width: 600px) {
-    nav ul {
-      flex-direction: column;
-    }
-  
-    nav li {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
-  
-  
+}

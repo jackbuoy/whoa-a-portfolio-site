@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>My Clean Looking Website</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Ideas</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Welcome to My Website!</h1>
-      <p>This is a clean looking website with a pleasing dark color palette and pastel accents. It has rounded edges and padding for everything so that nothing overlaps.</p>
-      <div class="discussion">
-        <h2>Short-Form Discussions</h2>
-        <ul>
-          <li>
-            <h3>Discussion 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </li>
-          <li>
-            <h3>Discussion 2</h3>
-            <p>Nullam a nisi varius, feugiat tellus in, ultrices ligula.</p>
-          </li>
-        </ul>
+    <div class="tabs">
+      <button class="tab active" data-target="idea1">Idea 1</button>
+      <button class="tab" data-target="idea2">Idea 2</button>
+      <button class="tab" data-target="idea3">Idea 3</button>
+    </div>
+    <div class="ideas">
+      <div id="idea1" class="idea active">
+        <h2>Idea 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae lacus a nisi egestas vulputate. Sed nec dolor massa. Nam nec magna et felis pulvinar faucibus vel non orci. Donec fermentum euismod purus. Duis porttitor nunc dolor, nec luctus velit malesuada vel.</p>
       </div>
-    </main>
-    <footer>
-      <p>&copy; 2023 My Clean Looking Website</p>
-    </footer>
+      <div id="idea2" class="idea">
+        <h2>Idea 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae lacus a nisi egestas vulputate. Sed nec dolor massa. Nam nec magna et felis pulvinar faucibus vel non orci. Donec fermentum euismod purus. Duis porttitor nunc dolor, nec luctus velit malesuada vel.</p>
+      </div>
+      <div id="idea3" class="idea">
+        <h2>Idea 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae lacus a nisi egestas vulputate. Sed nec dolor massa. Nam nec magna et felis pulvinar faucibus vel non orci. Donec fermentum euismod purus. Duis porttitor nunc dolor, nec luctus velit malesuada vel.</p>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
