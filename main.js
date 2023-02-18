@@ -2,8 +2,13 @@ const articles = document.querySelectorAll('article');
 let currentArticle = 0;
 
 function showArticle(index) {
-  articles[currentArticle].style.display = 'none';
-  articles[index].style.display = 'block';
+  for (let i = 0; i < articles.length; i++) {
+    if (i === index) {
+      articles[i].style.display = 'block';
+    } else {
+      articles[i].style.display = 'none';
+    }
+  }
   currentArticle = index;
 }
 
